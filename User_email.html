@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Angular HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="get_post.js"></script>
+    <link rel="stylesheet" href="css4.css">
+</head>
+<body>
+    <div data-ng-app="my_app"  >
+        <hr>
+        <h1>User Emails</h1>
+        <p>Drop Down List</p>
+        <div data-ng-controller="my_cntrl">
+            
+        <a href="/class/Home.html">Home Page</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/Search.html">Search</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/userlist.html">User List</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/Database.html">Data Base</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/User_names.html">First Names</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/User_last_names.html">last names</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/User_blog.html">Blog names</a>
+        <hr>
+        <p style="background-color: white;" id="clock">{{the_time}}</p>
+        <br>
+        <br>
+        <form>
+            <!-- <h4 style="background-color: white;">{{emails_filter[0]}}{{emails_filter[1]}}{{emails_filter[2]}}{{emails_filter[3]}}{{emails_filter[4]}}{{emails_filter[5]}}{{emails_filter[6]}}{{emails_filter[7]}}{{emails_filter[8]}}{{emails_filter[9]}}{{emails_filter[10]}}{{emails_filter[11]}}{{emails_filter[12]}}{{emails_filter[13]}}{{emails_filter[14]}}{{emails_filter[11]}}{{emails_filter[12]}}{{emails_filter[13]}}{{emails_filter[14]}}</h4> -->
+            <!-- <h4 style="background-color: grey;">{{emails_filter[20]}}{{emails_filter[21]}}{{emails_filter[22]}}{{emails_filter[23]}}{{emails_filter[24]}}{{emails_filter[25]}}{{emails_filter[26]}}{{emails_filter[27]}}{{emails_filter[28]}}{{emails_filter[29]}}{{emails_filter[30]}}</h4>
+            <h4 style="background-color: white;">{{emails_filter[35]}}{{emails_filter[36]}}{{emails_filter[37]}}{{emails_filter[38]}}{{emails_filter[39]}}{{emails_filter[40]}}{{emails_filter[41]}}{{emails_filter[42]}}{{emails_filter[43]}}{{emails_filter[44]}}{{emails_filter[45]}}{{emails_filter[46]}}{{emails_filter[47]}}{{emails_filter[48]}}{{emails_filter[49]}}{{emails_filter[50]}}{{emails_filter[51]}}{{emails_filter[52]}}{{emails_filter[53]}}{{emails_filter[54]}}</h4>
+            <h4 style="background-color: grey;">{{emails_filter[59]}}{{emails_filter[60]}}{{emails_filter[61]}}{{emails_filter[62]}}{{emails_filter[63]}}{{emails_filter[64]}}{{emails_filter[65]}}{{emails_filter[66]}}{{emails_filter[67]}}{{emails_filter[68]}}{{emails_filter[69]}}{{emails_filter[70]}}{{emails_filter[71]}}{{emails_filter[72]}}{{emails_filter[73]}}{{emails_filter[74]}}{{emails_filter[75]}}{{emails_filter[76]}}{{emails_filter[77]}}{{emails_filter[78]}}</h4>
+            <h4 style="background-color: white;">{{emails_filter[83]}}{{emails_filter[84]}}{{emails_filter[85]}}{{emails_filter[86]}}{{emails_filter[87]}}{{emails_filter[88]}}{{emails_filter[89]}}{{emails_filter[90]}}{{emails_filter[91]}}{{emails_filter[92]}}{{emails_filter[93]}}{{emails_filter[94]}}</h4>
+            <h4 style="background-color: grey;">{{emails_filter[98]}}{{emails_filter[99]}}{{emails_filter[100]}}{{emails_filter[101]}}{{emails_filter[102]}}{{emails_filter[103]}}{{emails_filter[104]}}{{emails_filter[105]}}{{emails_filter[106]}}{{emails_filter[107]}}{{emails_filter[108]}}{{emails_filter[109]}}{{emails_filter[110]}}{{emails_filter[111]}}{{emails_filter[112]}}</h4>
+            <h4 style="background-color: white;">{{emails_filter[117]}}{{emails_filter[118]}}{{emails_filter[119]}}{{emails_filter[120]}}{{emails_filter[121]}}{{emails_filter[122]}}{{emails_filter[123]}}{{emails_filter[124]}}{{emails_filter[125]}}{{emails_filter[126]}}{{emails_filter[127]}}{{emails_filter[128]}}</h4>
+            <h4 style="background-color: grey;">{{emails_filter[132]}}{{emails_filter[133]}}{{emails_filter[134]}}{{emails_filter[135]}}{{emails_filter[136]}}{{emails_filter[137]}}{{emails_filter[138]}}{{emails_filter[139]}}{{emails_filter[140]}}{{emails_filter[141]}}{{emails_filter[142]}}{{emails_filter[143]}}{{emails_filter[144]}}{{emails_filter[145]}}{{emails_filter[146]}}</h4>
+            <h4 style="background-color: white;">{{emails_filter[150]}}{{emails_filter[151]}}{{emails_filter[152]}}{{emails_filter[153]}}{{emails_filter[154]}}{{emails_filter[155]}}{{emails_filter[156]}}{{emails_filter[157]}}{{emails_filter[158]}}{{emails_filter[159]}}{{emails_filter[160]}}{{emails_filter[161]}}{{emails_filter[162]}}{{emails_filter[163]}}{{emails_filter[164]}}{{emails_filter[165]}}{{emails_filter[166]}}</h4>
+            <h4 style="background-color: grey;">{{emails_filter[170]}}{{emails_filter[171]}}{{emails_filter[172]}}{{emails_filter[173]}}{{emails_filter[174]}}{{emails_filter[175]}}{{emails_filter[176]}}{{emails_filter[177]}}{{emails_filter[178]}}{{emails_filter[179]}}{{emails_filter[180]}}{{emails_filter[181]}}{{emails_filter[182]}}{{emails_filter[183]}}{{emails_filter[184]}}{{emails_filter[185]}}</h4>
+                   -->
+            <h5 style="background-color: blue;">{{emails_filter}}</h5>
+            <h5 style="background-color: red;"><i>{{emails_filter}}</i></h5>
+            <p style="background-color: blue;">{{emails_filter}}</p>
+            <p style="background-color: red;"><i>{{emails_filter}}</i></p>
+            <p style="background-color: blue;">{{emails_filter}}</p>
+            <h4 style="background-color: purple;"><i>{{api_res}}</i></h4>
+             <br>
+             <br>
+             <label>Click to display list of users</label>
+             <br>
+             <br>
+            <select data-ng-click="email_data()" data-ng-model="emails_filter">
+                <option value="" >---Please select---</option>
+                <option data-ng-model="">{{api_res[1]}}</option>
+                <option >{{api_res[2]}}</option>
+                <option >{{api_res[3]}}</option>
+                <option >{{api_res[4]}}</option>
+                <option >{{api_res[5]}}</option>
+                <option >{{api_res[6]}}</option>
+                <option >{{api_res[7]}}</option>
+                <option >{{api_res[8]}}</option>
+                <option >{{api_res[9]}}</option>
+                <option >{{api_res[10]}}</option>
+                <option >{{api_res[11]}}</option>
+                <option >{{api_res[12]}}</option>
+                <option data-ng-model="">{{api_res}}</option>
+            </select>
+        <br>
+       
+        <br>
+        <p>{{api_txt}}</p>
+        <br>
+        <h2 >{{emails_filter}}</h2>
+        <h2>{{api_res}}</h2>
+        </form>
+        <br><br>
+        <br><br>
+        <h6><sub>{{myUrl}}</sub></h6>
+   
+    </div>
+</body>
+</html>

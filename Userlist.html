@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Angular HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="get_post.js"></script>
+    <link rel="stylesheet" href="css7.css">
+</head>
+<body>
+    <div data-ng-app="my_app"  >
+        <hr>
+        <h1>User List</h1>
+        <p>Drop Down List</p>
+        <div data-ng-controller="my_cntrl">
+            
+        <a href="/class/Home.html">Home Page</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/Search.html">Search</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/Database.html">Data Base</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/User_email.html">Email List</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/User_names.html">First Names</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/User_last_names.html">last names</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/User_blog.html">Blog names</a>
+        <hr>
+        <p style="background-color: white;" id="clock">{{the_time}}</p>
+        <br>
+        <br>
+        <form>
+       
+            <h2>{{user_list_filter}}</h2>
+             <br>
+             <p  style="background-color: lightblue;">{{api_res[0]}} {{api_res[1]}} {{api_res[2]}} {{api_res[3]}} {{api_res[4]}} {{api_res[5]}} {{api_res[6]}} {{api_res[7]}} {{api_res[8]}} {{api_res[10]}}</p>
+             <br>
+             <label>Click to display the User list</label>
+             <br>
+             <br>
+            <select data-ng-click="user_list_data()" data-ng-model="user_list_filter">
+                <option value="" >---Please select---</option>
+                <option data-ng-model="">{{api_res[1]}}</option>
+                <option >{{api_res[2]}}</option>
+                <option >{{api_res[3]}}</option>
+                <option >{{api_res[4]}}</option>
+                <option >{{api_res[5]}}</option>
+                <option >{{api_res[6]}}</option>
+                <option >{{api_res[7]}}</option>
+                <option >{{api_res[8]}}</option>
+                <option >{{api_res[9]}}</option>
+                <option >{{api_res[10]}}</option>
+                <option >{{api_res[11]}}</option>
+                <option data-ng-model="">{{api_res}}</option>
+            </select>
+        <br>
+        <br>
+        <br>
+        <p>{{api_txt}}</p>
+        <br>
+        <h2>{{user_list_filter}}</h2>
+        <h2>{{api_res}}</h2>
+        </form>
+        <br><br>
+        <br><br>
+        <h6><sub>{{myUrl}}</sub></h6>
+   
+    </div>
+</body>
+</html>

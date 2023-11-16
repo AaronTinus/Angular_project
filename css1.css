@@ -1,0 +1,16 @@
+html, div{
+    background-color: lightgray;
+    text-align: center;
+}
+h6{
+   float: left;
+   
+}
+#clock{
+    max-width: 100px;
+    margin-left: 45%;
+    border-radius: 8px;
+}
+li{
+    list-style-position: inside;
+}

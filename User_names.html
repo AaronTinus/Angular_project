@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Angular HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="get_post.js"></script>
+    <link rel="stylesheet" href="css2.css">
+</head>
+<body>
+    <div data-ng-app="my_app"  >
+        <hr>
+        <h1>User First Names</h1>
+        <p>Drop Down List</p>
+        <div data-ng-controller="my_cntrl">
+            
+        <a href="/class/Home.html">Home Page</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/Search.html">Search</a>
+      <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/userlist.html">User List</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/Database.html">Data Base</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/User_email.html">Email List</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/User_last_names.html">last names</a>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="/class/User_blog.html">Blog names</a>
+        <hr>
+        <p style="background-color: white;" id="clock">{{the_time}}</p>
+        <br>
+        <br>
+        <form>
+            <p  style="background-color: lightblue;">{{api_res[0]}} {{api_res[1]}} {{api_res[2]}} {{api_res[3]}} {{api_res[4]}} {{api_res[5]}} {{api_res[6]}} {{api_res[7]}} {{api_res[8]}} {{api_res[10]}} {{api_res[11]}}</p>
+            <!-- <h2>{{name_filter}}</h2> -->
+             <br>
+             <h4 style="background-color: white;">{{name_filter[49]}}{{name_filter[50]}}{{name_filter[51]}}{{name_filter[52]}}</h4>
+        <h4 style="background-color: grey;">{{name_filter[56]}}{{name_filter[57]}}</h4>
+        <h4 style="background-color: white;">{{name_filter[69]}}{{name_filter[70]}}{{name_filter[71]}}{{name_filter[72]}}{{name_filter[73]}}</h4>
+        <h4 style="background-color: grey;">{{name_filter[77]}}{{name_filter[78]}}{{name_filter[79]}}{{name_filter[80]}}</h4>
+        <h4 style="background-color: white;">{{name_filter[84]}}{{name_filter[85]}}{{name_filter[86]}}{{name_filter[87]}}{{name_filter[88]}}{{name_filter[89]}}</h4>
+        <h4 style="background-color: grey;">{{name_filter[93]}}{{name_filter[94]}}{{name_filter[95]}}</h4>
+        <h4 style="background-color: white;">{{name_filter[99]}}{{name_filter[100]}}{{name_filter[101]}}{{name_filter[102]}}</h4>
+        <h4 style="background-color: grey;">{{name_filter[106]}}{{name_filter[107]}}{{name_filter[108]}}{{name_filter[109]}}</h4>
+        <h4 style="background-color: white;">{{name_filter[113]}}{{name_filter[114]}}{{name_filter[115]}}{{name_filter[116]}}{{name_filter[117]}}</h4>
+             <br>
+             <label>Click to display list of users</label>
+             <br>
+             <br>
+            <select data-ng-click="name_data()" placeholder="select" data-ng-model="name_filter">
+                <option value="" >---Please select---</option>
+                <option data-ng-model="">{{api_res[1]}}</option>
+                <option >{{api_res[2]}}</option>
+                <option >{{api_res[3]}}</option>
+                <option >{{api_res[4]}}</option>
+                <option >{{api_res[5]}}</option>
+                <option >{{api_res[6]}}</option>
+                <option >{{api_res[7]}}</option>
+                <option >{{api_res[8]}}</option>
+                <option >{{api_res[9]}}</option>
+                <option >{{api_res[10]}}</option>
+                <option >{{api_res[11]}}</option>
+                <option >{{api_res[12]}}</option>
+                <option data-ng-model="">{{api_res}}</option>
+            </select>
+        <br>
+        <br>
+        <br>
+        <p>{{api_txt}}</p>
+        <br>
+        <h5>{{api_res}}</h5>
+        <!-- <h2>{{name_filter[0]}}{{name_filter[1]}}{{name_filter[2]}}</h2>
+        <h2>{{name_filter[1]}}</h2>
+        <h2>{{name_filter[2]}}</h2>
+        <h2>{{name_filter[3]}}</h2> -->
+        <!-- <h4 style="background-color: white;">{{name_filter[49]}}{{name_filter[50]}}{{name_filter[51]}}{{name_filter[52]}}</h4>
+        <h4 style="background-color: grey;">{{name_filter[56]}}{{name_filter[57]}}</h4>
+        <h4 style="background-color: white;">{{name_filter[69]}}{{name_filter[70]}}{{name_filter[71]}}{{name_filter[72]}}{{name_filter[73]}}</h4>
+        <h4 style="background-color: grey;">{{name_filter[77]}}{{name_filter[78]}}{{name_filter[79]}}{{name_filter[80]}}</h4>
+        <h4 style="background-color: white;">{{name_filter[84]}}{{name_filter[85]}}{{name_filter[86]}}{{name_filter[87]}}{{name_filter[88]}}{{name_filter[89]}}</h4>
+        <h4 style="background-color: grey;">{{name_filter[93]}}{{name_filter[94]}}{{name_filter[95]}}</h4>
+        <h4 style="background-color: white;">{{name_filter[99]}}{{name_filter[100]}}{{name_filter[101]}}{{name_filter[102]}}</h4>
+        <h4 style="background-color: grey;">{{name_filter[106]}}{{name_filter[107]}}{{name_filter[108]}}{{name_filter[109]}}</h4>
+        <h4 style="background-color: white;">{{name_filter[113]}}{{name_filter[114]}}{{name_filter[115]}}{{name_filter[116]}}{{name_filter[117]}}</h4> -->
+        <!-- <h2>{{name_filter[38]}}</h2>
+        <h2>{{name_filter[36]}}</h2>
+        <h2>{{item.Author_name}}</h2>
+        <h2>{{api_res}}</h2>
+        <h2>{{api_res}}</h2> -->
+        </form>
+        <br><br>
+        <br><br>
+        <h6><sub>{{myUrl}}</sub></h6>
+   
+    </div>
+</body>
+</html>

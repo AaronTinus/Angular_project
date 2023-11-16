@@ -1,0 +1,36 @@
+.ng-empty{
+    background-color: lightgrey;
+}
+
+.ng-not-empty{
+    background-color: chartreuse;
+}
+html, div{
+    background-color: aqua;
+    text-align: center;
+}
+#clock{
+    max-width: 100px;
+    margin-left: 46.5%;
+    border-radius: 8px;
+}
+h6{
+    float: left;
+    
+ }
+form{
+    margin: auto;
+    max-width: 70%;
+    border: 1px solid black;
+}
+
+ table, tr, td{
+    /* border-radius: 8px; */
+    border: 1px solid black;
+    margin: auto;
+    padding: 2%;
+    /* max-width: 70%; */
+ }
+ hr{
+    border-color: black;
+ }

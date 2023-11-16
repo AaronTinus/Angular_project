@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="get_post.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div data-ng-app="my_app"  >
+        <hr>
+      <h1>HOME PAGE</h1>
+      <p>With input form</p>
+      <a href="/class/Search.html">Search</a>
+      <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="/class/User_names.html">First names</a>
+      <hr>
+        <div data-ng-controller="my_cntrl">
+           
+            <p style="background-color: white;" id="clock">{{the_time}}</p>
+            <br>
+            <br>
+            <p data-ng-bind="user_blog" style="background-color: white;">{{post_res}}</p>
+             <form name="my_form" action="/upload" method="post" enctype="multipart/form-data">
+                <h1><bold>Personal Blog</bold></h1>
+                <table>
+            <br>
+            <tr>
+                <th>User Information</th>
+                <th>Welcome To Your Personal Blog!</th>
+                <th>User Blog</th>
+            </tr>
+            <tr>
+                <td> 
+                <label for="author_name">First name:</label>
+                <input type="text" data-ng-model = "user_author_name">
+                </td>
+                <td></td>
+                <td>
+                <label for="blog_name">Blog Title:</label>
+                <input type="text" data-ng-model = "user_blog_name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label for="author_lname">Last name:</label>
+                <input type="text" data-ng-model = "user_author_lname">
+                </td>
+                <td></td>
+                <td>
+                <label for="user-blog">Content:</label>
+                <input type="text" data-ng-model = "user_blog">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label for="author_email">Email add:</label>
+                <input type="email" name="author_email" data-ng-model = "user_author_email" required>
+                </td>
+                <td>
+                <span ng-show="my_form.author_email.$error.email">Not a correct email address</span>
+                <span ng-show="my_form.author_email.$error.required">Email is required</span>
+                <p>{{my_form.author_email.$error.email}}</p>
+                </td>
+                <td>
+                <label for="user_file">Upload file</label>
+                <input type="file" name="user_file" data-ng-model = "user_author_file" >
+                </td>
+            </tr>
+            <br>
+            <br>
+            </table> 
+            <br>
+            <br>
+            <button ng-click="make_post()">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input data-ng-model="my_form" type="reset" value="clear">
+            <br>
+            <p data-ng-bind="user_blog">{{post_res}}</p>
+        </form>
+        <br>
+        <h6><sub>{{myUrl}}</sub></h6>
+        </div>
+    </div>
+</body>
+</html>

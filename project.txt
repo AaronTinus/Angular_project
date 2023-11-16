@@ -1,0 +1,20 @@
+The aim of this project is to use Node/Express as the backend language, 
+Angular Js as front end language and MongoDB as our database.
+
+The backend server will connect to mongodb to save and fetch data to/from the database. 
+Angular JS will be responsible for serving HTML and making get and post request to backend server.
+
+You can create your own project that demonstrate these stacks.
+
+Blog website
+
+A blog post website that allows users to upload blogs or read blogs.
+
+A home page with a form that asks for a blog details will be required. 
+this form can ask questions like Blog title, Sub title, Blog body, Author etc. 
+This information will then be send to the backend where a POST endpoint will accept it and save to database.
+
+Another page to look for a blog by author name or title will be there upon selection of which
+ a get request will URL parameter will be send to backend server which will 
+ have a GET endpoint which will serve the blog content based on title or author name filter and 
+ send back data to front end server. Front end server will then show the blog to user in a good UI format.
